@@ -12,7 +12,11 @@ app.get("/", (req, res) => {
 
 app.get("/drinks", (req, res) => {
     res.render('drinks_index.ejs', { 
-    'drinks': drinks });
+    'allDrinks': drinks });
+});
+
+app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id);
 });
 
 

@@ -14,7 +14,14 @@
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
-    
-    
+    <% for(let i = 0; i < allDrinks.length; i++) { %>
+        <p>
+            <ul>
+            <!-- <a href="/drinks/<%= i %>"> -->
+            <%= (allDrinks[i].name).charAt(0).toUpperCase() + (allDrinks[i].name).slice(1) %>
+            <!-- </a> -->
+            </ul>
+        </p>
+    <% } %>  
 </body>
 </html>
