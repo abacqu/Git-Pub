@@ -15,8 +15,15 @@ app.get("/drinks", (req, res) => {
     'allDrinks': drinks });
 });
 
-app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id);
+// app.get("/drinks/:id", (req, res) => {
+//     res.send(req.params.id);
+// });
+
+
+app.get("/drinks/:indexOfDrinksArray", (req, res) => {
+    res.render('drinks_show.ejs', {
+        drink: drinks[req.params.indexOfDrinksArray],
+    });
 });
 
 
