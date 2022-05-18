@@ -11,7 +11,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/drinks", (req, res) => {
-    res.render('drinks_index.ejs', { 'allDrinks': drinks });
+    res.render('drinks_index.ejs', { 
+    'drinks': drinks });
 });
 
 
